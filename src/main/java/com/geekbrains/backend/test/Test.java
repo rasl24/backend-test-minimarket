@@ -19,10 +19,10 @@ public class Test {
 //        List<Category> categories = service.getCategory(1L);
 //        System.out.println(categories);
 
-        List<Products> productsList = service.getProduct();
-        System.out.println(productsList);
-
-        ProductResponse productResponse = service.deleteProduct(100L);
-        System.out.println(productResponse);
+//        List<Products> productsList = service.getProduct();
+//        System.out.println(productsList);
+//
+//        ProductResponse productResponse = service.deleteProduct(100L);
+//        System.out.println(productResponse);
     }
 }

@@ -48,16 +48,16 @@ public class MiniMarketService {
 //        }
 //    }
 
-    public List<Products> getProduct() throws IOException {
-        Response<List<Products>> response = api.getProduct().execute();
-        if(response.isSuccessful()){
-            List<Products> productsList = response.body();
-            productsList.forEach(products -> products.getProduct());
-            return response.body();
-        } else {
-            throw new RuntimeException("404");
-        }
-    }
+//    public List<Products> getProduct() throws IOException {
+//        Response<List<Products>> response = api.getProduct().execute();
+//        if(response.isSuccessful()){
+//            List<Products> productsList = response.body();
+//            productsList.forEach(products -> products.getProduct());
+//            return response.body();
+//        } else {
+//            throw new RuntimeException("404");
+//        }
+//    }
 
 //    public ProductResponse createProduct(){
 //        Response<Product> response = api.createProduct(new Product()
@@ -66,26 +66,26 @@ public class MiniMarketService {
 //                .setPrice(50));
 //    }
 
-    public ProductResponse deleteProduct(Long id) throws IOException {
-        Response<Object> response = api.deleteProduct(id).execute();
-        ProductResponse productResponse = new ProductResponse();
-        if(response.isSuccessful()){
-            return productResponse;
-        } else {
-            productResponse.setError(response.errorBody().string());
-            return productResponse;
-        }
-    }
-
-    public ProductResponse updateProduct(){
-        Response<Object> response = api.updateProduct().execute();
-        ProductResponse productResponse = new ProductResponse();
-        if(response.isSuccessful()){
-            productResponse.setProduct(response.body());
-            return productResponse;
-        } else {
-            productResponse.setError(response.errorBody().string());
-            return productResponse;
-        }
-    }
+//    public ProductResponse deleteProduct(Long id) throws IOException {
+//        Response<Object> response = api.deleteProduct(id).execute();
+//        ProductResponse productResponse = new ProductResponse();
+//        if(response.isSuccessful()){
+//            return productResponse;
+//        } else {
+//            productResponse.setError(response.errorBody().string());
+//            return productResponse;
+//        }
+//    }
+//
+//    public ProductResponse updateProduct(){
+//        Response<Object> response = api.updateProduct().execute();
+//        ProductResponse productResponse = new ProductResponse();
+//        if(response.isSuccessful()){
+//            productResponse.setProduct(response.body());
+//            return productResponse;
+//        } else {
+//            productResponse.setError(response.errorBody().string());
+//            return productResponse;
+//        }
+//    }
 }
